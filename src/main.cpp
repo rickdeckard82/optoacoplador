@@ -1,20 +1,17 @@
 #include <Arduino.h>
-#define IGNICAOPIN 33  // Pino ligado ao coletor do optoacoplador
+#define OPTO1 34
+#define OPTO2 35
 
 void setup() {
   Serial.begin(115200);
-  pinMode(IGNICAOPIN, INPUT);  // Define como entrada
-  Serial.println("Monitorando a chave de ignição...");
+  pinMode(OPTO1, INPUT);
+  pinMode(OPTO2, INPUT);
 }
 
 void loop() {
-  int estado = digitalRead(IGNICAOPIN);
-
-  if (estado == LOW) {
-    Serial.println("🔑 Chave LIGADA (sinal presente)");
-  } else {
-    Serial.println("🔒 Chave DESLIGADA (sem sinal)");
-  }
-
-  delay(1000); // Aguarda 1 segundo
+  Serial.print("Opto1: ");
+  Serial.print(digitalRead(OPTO1) == LOW ? "ATIVO" : "INATIVO");
+  Serial.print(" | Opto2: ");
+  Serial.println(digitalRead(OPTO2) == LOW ? "ATIVO" : "INATIVO");
+  delay(500);
 }
