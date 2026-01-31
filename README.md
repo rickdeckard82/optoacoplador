@@ -1,4 +1,4 @@
-<img src="https://cdn-1.ehs.eti.br/PC817-IC-Pin-Diagram.jpg" align="center"/>
+<img src="https://cdn.ehs.eti.br/PC817-IC-Pin-Diagram.jpg" align="center"/>
 
 <p>Diagrama de pinos PC817 IC</p>
 <p>Pin1 (Ânodo): No IC do optoacoplador, este é um pino ânodo do LED infravermelho (Tx). Este pino fornece um sinal de entrada lógico para o IR interno.</p>
